@@ -1,0 +1,33 @@
+@mixin fontStyle ($font, $size, $weight, $line, $color) {
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    color: $color;
+}
+
+@mixin mediaText($device) {
+    @if ($device == mobile) {
+        @media (max-width: 375px){
+            @content;
+        }
+    }
+    
+    @if ($device == full) {
+        @media (max-width: 1024px){
+            @content;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 23px;
+
+    @include mediaText(mobile) {
+        padding-top: 0;
+    }
+}
+

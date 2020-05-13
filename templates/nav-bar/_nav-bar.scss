@@ -1,0 +1,63 @@
+.nav-bar {
+    max-width: 169px;
+    padding: 0 24px 0 14px;
+    display: inline-block;
+    vertical-align: top;
+    @include mediaText (mobile) {
+        display: inline-block;
+        position: relative;
+    }
+
+    input {
+        @include mediaText (mobile) {
+            position: absolute;
+            top: 58px;
+            left: 25px;
+        }
+    }
+}
+
+.nav-bar:hover .nav-bar__item {
+    @include mediaText (mobile) {
+        display: block;
+    }
+}
+
+.nav-bar__logo {
+    margin-bottom: 43px;
+
+    @include mediaText(mobile) {
+        display: none;
+    }
+}
+
+.nav-bar__item {
+    max-width: 124.98px;
+    height: 561px;
+    @include fontStyle (Source Sans Pro, 12px, semibold, 16px, #0F1E36);
+    
+    .blue {
+        color: #3E2AD1;
+        opacity: 1;
+    } 
+
+    .plus {
+        float: right;
+    }
+    li {
+        padding-bottom: 24px;
+        opacity: 0.5;
+    }
+    
+    p {
+        padding-bottom: 16px;
+    }
+
+    @include mediaText (mobile) {
+        display: none;
+
+    }
+
+    
+}
+
